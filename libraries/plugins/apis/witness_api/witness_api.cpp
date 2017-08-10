@@ -32,7 +32,7 @@ witness_api::witness_api()
 {
    my = std::make_shared< detail::witness_api_impl >();
 
-   JSON_RPC_REGISTER_API( STEEM_WITNESS_API_PLUGIN_NAME, (get_account_bandwidth) );
+   JSON_RPC_REGISTER_API( STEEM_WITNESS_API_PLUGIN_NAME );
 }
 
 get_account_bandwidth_return witness_api::get_account_bandwidth( const get_account_bandwidth_args& args )

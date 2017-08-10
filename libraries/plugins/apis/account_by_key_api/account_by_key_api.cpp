@@ -47,7 +47,7 @@ account_by_key_api::account_by_key_api()
 {
    my = std::make_shared< detail::account_by_key_api_impl >();
 
-   JSON_RPC_REGISTER_API( STEEM_ACCOUNT_BY_KEY_API_PLUGIN_NAME, (get_key_references) );
+   JSON_RPC_REGISTER_API( STEEM_ACCOUNT_BY_KEY_API_PLUGIN_NAME );
 }
 
 get_key_references_return account_by_key_api::get_key_references( const get_key_references_args& args )

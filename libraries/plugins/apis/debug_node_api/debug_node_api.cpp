@@ -266,21 +266,7 @@ debug_node_api::debug_node_api()
 {
    my = std::make_shared< detail::debug_node_api_impl >();
 
-   JSON_RPC_REGISTER_API(
-      STEEM_DEBUG_NODE_API_PLUGIN_NAME,
-      (debug_push_blocks)
-      (debug_generate_blocks)
-      (debug_generate_blocks_until)
-      (debug_pop_block)
-      (debug_get_witness_schedule)
-      (debug_get_hardfork_property_object)
-      (debug_set_dev_key_prefix)
-      (debug_get_dev_key)
-      (debug_mine)
-      (debug_set_hardfork)
-      (debug_has_hardfork)
-      (debug_get_json_schema)
-   );
+   JSON_RPC_REGISTER_API( STEEM_DEBUG_NODE_API_PLUGIN_NAME );
 }
 
 DEFINE_API( debug_node_api, debug_push_blocks )

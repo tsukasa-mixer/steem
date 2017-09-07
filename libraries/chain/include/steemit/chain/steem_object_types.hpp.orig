@@ -67,7 +67,9 @@ enum object_type
    reward_fund_object_type,
    vesting_delegation_object_type,
    vesting_delegation_expiration_object_type,
-   htl_contract_object_type,
+<<<<<<< HEAD
+   htl_contract_object_type
+=======
 
    // SMT objects
    smt_token_object_type
@@ -250,8 +252,12 @@ FC_REFLECT_ENUM( steemit::chain::object_type,
                  (reward_fund_object_type)
                  (vesting_delegation_object_type)
                  (vesting_delegation_expiration_object_type)
+<<<<<<< HEAD
                  (htl_contract_object_type)
+=======
+
                  (smt_token_object_type)
+>>>>>>> 0939d874386e05fb410524fa47595fc65d68494d
                )
 
 FC_REFLECT_TYPENAME( steemit::chain::shared_string )

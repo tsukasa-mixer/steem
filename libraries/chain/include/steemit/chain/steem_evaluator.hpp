@@ -58,5 +58,6 @@ STEEM_DEFINE_EVALUATOR( smt_refund )
 STEEM_DEFINE_EVALUATOR( smt_setup_inflation )
 STEEM_DEFINE_EVALUATOR( smt_set_setup_parameters )
 STEEM_DEFINE_EVALUATOR( smt_set_runtime_parameters )
+STEEM_DEFINE_EVALUATOR( smt_elevate_account )
 
 } } // steemit::chain

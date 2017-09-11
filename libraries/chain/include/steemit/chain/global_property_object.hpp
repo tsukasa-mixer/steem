@@ -80,7 +80,7 @@ namespace steemit { namespace chain {
           */
          uint16_t sbd_interest_rate = 0;
 
-         uint16_t sbd_print_rate = STEEMIT_100_PERCENT;
+         uint16_t sbd_print_rate = STEEM_100_PERCENT;
 
          /**
           *  Maximum block size is decided by the set of active witnesses which change every round.
@@ -113,6 +113,8 @@ namespace steemit { namespace chain {
           * their votes reduced.
           */
          uint32_t vote_power_reserve_rate = STEEM_INITIAL_VOTE_POWER_RATE;
+
+         asset smt_creation_fee = asset( 1000000, SBD_SYMBOL );
    };
 
    typedef multi_index_container<
@@ -153,5 +155,6 @@ FC_REFLECT( steemit::chain::dynamic_global_property_object,
              (participation_count)
              (last_irreversible_block_num)
              (vote_power_reserve_rate)
+             (smt_creation_fee)
           )
 CHAINBASE_SET_INDEX_TYPE( steemit::chain::dynamic_global_property_object, steemit::chain::dynamic_global_property_index )

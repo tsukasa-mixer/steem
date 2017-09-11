@@ -132,6 +132,9 @@ void chain_plugin::plugin_startup()
          }
       }
    }
+
+   ilog( "Started on blockchain with ${n} blocks", ("n", my->db.head_block_num()) );
+   on_sync();
 }
 
 void chain_plugin::plugin_shutdown()
@@ -146,7 +149,8 @@ bool chain_plugin::accept_block( const steemit::chain::signed_block& block, bool
    if (currently_syncing && block.block_num() % 10000 == 0) {
       ilog("Syncing Blockchain --- Got block: #${n} time: ${t} producer: ${p}",
            ("t", block.timestamp)
-           ("n", block.block_num()) );
+           ("n", block.block_num())
+           ("p", block.witness) );
    }
 
    check_time_in_block( block );
